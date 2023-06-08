@@ -3,9 +3,10 @@ from tkinter import *
 # Crear ventana principal
 ventana = Tk()
 ventana.title("Calculadora")
+ventana.configure(bg="#4c007d")
 
 # Crear pantalla
-pantalla = Entry(ventana, font=("Calibri 20"))
+pantalla = Entry(ventana, font=("Calibri 20"), bg="#7f00b2", fg='white', relief='flat')
 pantalla.grid(row=0, column=0, columnspan=4, padx = 5, pady = 4)
 
 # Funciones
@@ -21,27 +22,27 @@ def evaluar():
 
 # Botones
 
-boton_1 = Button(ventana, text="1", width= 5, height=2, command=lambda :agregar_valor(1))
-boton_2 = Button(ventana, text="2", width= 5, height=2, command=lambda :agregar_valor(2))
-boton_3 = Button(ventana, text="3", width= 5, height=2, command=lambda :agregar_valor(3))
-boton_4 = Button(ventana, text="4", width= 5, height=2, command=lambda :agregar_valor(4))
-boton_5 = Button(ventana, text="5", width= 5, height=2, command=lambda :agregar_valor(5))
-boton_6 = Button(ventana, text="6", width= 5, height=2, command=lambda :agregar_valor(6))
-boton_7 = Button(ventana, text="7", width= 5, height=2, command=lambda :agregar_valor(7))
-boton_8 = Button(ventana, text="8", width= 5, height=2, command=lambda :agregar_valor(8))
-boton_9 = Button(ventana, text="9", width= 5, height=2, command=lambda :agregar_valor(9))
-boton_0 = Button(ventana, text="0", width=18, height=2, command=lambda :agregar_valor(0))
+boton_1 = Button(ventana, text="1", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor(1))
+boton_2 = Button(ventana, text="2", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor(2))
+boton_3 = Button(ventana, text="3", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor(3))
+boton_4 = Button(ventana, text="4", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor(4))
+boton_5 = Button(ventana, text="5", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor(5))
+boton_6 = Button(ventana, text="6", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor(6))
+boton_7 = Button(ventana, text="7", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor(7))
+boton_8 = Button(ventana, text="8", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor(8))
+boton_9 = Button(ventana, text="9", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor(9))
+boton_0 = Button(ventana, text="0", bg= "#7f00b2", fg='white', relief='flat', width=18, height=2, command=lambda :agregar_valor(0))
 
-boton_borrar = Button(ventana, text="AC", width= 5, height=2, command=borrar)
-boton_parentesis1 = Button(ventana, text="(", width= 5, height=2, command=lambda :agregar_valor("("))
-boton_parentesis2 = Button(ventana, text=")", width= 5, height=2, command=lambda :agregar_valor(")"))
-boton_punto = Button(ventana, text=".", width= 5, height=2, command=lambda :agregar_valor("."))
+boton_borrar = Button(ventana, text="AC", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=borrar)
+boton_parentesis1 = Button(ventana, text="(", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor("("))
+boton_parentesis2 = Button(ventana, text=")", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor(")"))
+boton_punto = Button(ventana, text=".", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor("."))
 
-boton_div = Button(ventana, text="/", width= 5, height=2, command=lambda :agregar_valor("/"))
-boton_suma = Button(ventana, text="+", width=5, height=2, command=lambda :agregar_valor("+"))
-boton_resta = Button(ventana, text="-", width= 5, height=2, command=lambda :agregar_valor("-"))
-boton_multiplicar = Button(ventana, text="X", width= 5, height=2, command=lambda :agregar_valor("*"))
-boton_igual = Button(ventana, text="=", width= 5, height=2, command= evaluar)
+boton_div = Button(ventana, text="/", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor("/"))
+boton_suma = Button(ventana, text="+", bg= "#7f00b2", fg='white', relief='flat', width=5, height=2, command=lambda :agregar_valor("+"))
+boton_resta = Button(ventana, text="-", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor("-"))
+boton_multiplicar = Button(ventana, text="X", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command=lambda :agregar_valor("*"))
+boton_igual = Button(ventana, text="=", bg= "#7f00b2", fg='white', relief='flat', width= 5, height=2, command= evaluar)
 
 # Agregar botones en interfaz
 
