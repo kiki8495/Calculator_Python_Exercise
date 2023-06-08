@@ -13,12 +13,15 @@ def agregar_valor(valor):
     pantalla.insert(END, valor)
 def borrar():
     pantalla.delete(0, END)
-#Botones
-#boton_ = Button(ventana, text="", width= 5, height=2)
+def evaluar():
+    datos = pantalla.get()
+    borrar()
+    resultado = eval(datos)
+    pantalla.insert(END, resultado)
+
+# Botones
 
 boton_1 = Button(ventana, text="1", width= 5, height=2, command=lambda :agregar_valor(1))
-
-
 boton_2 = Button(ventana, text="2", width= 5, height=2, command=lambda :agregar_valor(2))
 boton_3 = Button(ventana, text="3", width= 5, height=2, command=lambda :agregar_valor(3))
 boton_4 = Button(ventana, text="4", width= 5, height=2, command=lambda :agregar_valor(4))
@@ -38,10 +41,10 @@ boton_div = Button(ventana, text="/", width= 5, height=2, command=lambda :agrega
 boton_suma = Button(ventana, text="+", width=5, height=2, command=lambda :agregar_valor("+"))
 boton_resta = Button(ventana, text="-", width= 5, height=2, command=lambda :agregar_valor("-"))
 boton_multiplicar = Button(ventana, text="X", width= 5, height=2, command=lambda :agregar_valor("*"))
-boton_igual = Button(ventana, text="=", width= 5, height=2, command=lambda :agregar_valor("4"))
+boton_igual = Button(ventana, text="=", width= 5, height=2, command= evaluar)
 
-#Agregar botones en interfaz
-#boton_.grid(row= , column= , padx=5, pady=5)
+# Agregar botones en interfaz
+
 boton_borrar.grid(row=1, column=0, padx=5, pady=5)
 boton_parentesis1.grid(row=1, column=1, padx=5, pady=5)
 boton_parentesis2.grid(row=1, column=2, padx=5, pady=5)
@@ -67,4 +70,5 @@ boton_punto.grid(row= 5, column=2, padx=5, pady= 5)
 boton_igual.grid(row= 5, column=3, padx=5, pady= 5)
 
 # Ejecutar la calculadora
+
 ventana.mainloop()
